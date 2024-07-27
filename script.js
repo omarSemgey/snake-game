@@ -25,7 +25,8 @@ highScoreMenuElement.innerText = `High Score: ${highScore}`;
 //change color via color buttons
 
 colorBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", () => {
+    difficultyChange();
     document.querySelector(".options .selected").classList.remove("selected");
     btn.classList.add("selected");
     selectedColor = window.getComputedStyle(btn).getPropertyValue("background-color");
@@ -201,9 +202,9 @@ Ah shit, here we go again.
 `,
 failMessagesLength = failMessages.split(/\r\n|\r|\n/).length -2;
 
-let failMessage = failMessages.split(/\r\n|\r|\n/)[Math.floor(Math.random() * (failMessagesLength - 1 + 1) + 1)];
 
 function handleGameOver(){
+    let failMessage = failMessages.split(/\r\n|\r|\n/)[Math.floor(Math.random() * (failMessagesLength - 1 + 1) + 1)];
     stopMoving();
     lose();
     scoreElement.innerText = "Score: 0";
