@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake game</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="pop-up win hide">
+        <h1 class="message">Congrats!</h1>
+        <h3>Your reward:</h3>
+        <img src="assets/images/cat.jpeg" alt="">
+        <button class="replay">Play again!</button>
+    </div>
+    <div class="pop-up game-over hide">
+        <h2 class="message">You failed</h2>
+        <h3 class="info high-score">High Score: 0</h3>
+        <h3 class="info score">score: 0</h3>
+        <button class="restart">Restart Game!</button>
+    </div>
+    <div class="pop-up menu ">
+        <h3 class="high-score">High Score: 0</h3>
+        <div class="colors">
+            <label for="" class="title">Choose your color:</label>
+            <ul class="options">
+                <li class="option"></li>
+                <li class="option selected"></li>
+                <li class="option"></li>
+                <li class="option"></li>
+                <li class="option">
+                    <input type="color" value="#000000" id="color-picker">
+                </li>
+            </ul>
+        </div>
+        <h3>Difficulty:</h3>
+        <div class="difficulties">
+            <button id="easy">easy</button>
+            <button id="normal" class="active">normal</button>
+            <button id="hard">hard</button>
+            <button id="extreme">extreme</button>
+        </div>
+        <button class="play">Start Game!</button>
+    </div>
+    <div class="wrapper">
+        <div class="game-details">
+            <span class="score">Score: 0</span>
+            <span class="high-score">High Score: 0</span>
+        </div>
+        <div class="play-board"></div>
+        <div class="controls">
+            <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+            <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+            <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+            <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+        </div>
+    </div>
+</body>
+</html>
